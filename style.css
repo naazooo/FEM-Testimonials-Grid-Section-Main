@@ -1,0 +1,139 @@
+/* MOBILE */
+
+:root{
+    --violet: hsl(263, 55%, 52%);
+    --vd-grayish-blue: hsl(217, 19%, 35%);
+    --vd-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --l-gray: hsl(0, 0%, 81%);
+    --l-grayish-blue: hsl(210, 46%, 95%);
+}
+
+.flex{display: flex;}
+.flex-column{flex-direction: column;}
+.flex-row{flex-direction: row;}
+
+.txt-light{color: var(--l-gray);}
+.txt-dark{color: var(--vd-blackish-blue);}
+
+.status{
+    opacity: 50%;
+    font-size: 0.86rem;
+}
+.quote{
+    opacity: 70%;
+    line-height: 1.4em;
+}
+
+body,h1,p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+body{
+    background-color:var(--l-grayish-blue) ;
+    display: grid;
+    place-content: center;
+    height: auto;
+    padding: 4em 1.8em;
+    
+}
+
+section{
+    background-color:var(--bg-color);
+    padding: 2em 2.6em 3em 2.5em;
+    border-radius: 8px;
+    row-gap: 1.2em;
+    box-shadow: 14px 15px 22px -17px hsl(217deg 19% 35% / 62%);
+}
+
+#sec1{
+    background: url(images/bg-pattern-quotation.svg) top right 2em no-repeat var(--bg-color);
+}
+
+main{
+    display: grid;
+    row-gap: 2em;
+}
+
+.name_group img{
+    height: 2em;
+    border-radius: 50%;
+    align-items: center;
+    row-gap: 2em;
+}
+
+.name_group{
+    align-items: center;
+    column-gap: 1.3em;
+}
+
+h1{
+    font-size: 1.54rem;
+}
+
+.ext_pad{
+    padding-right: 1.2em;
+}
+
+/* DEKSTOP */
+
+@media only screen and (min-width: 1000px) {
+
+    body{
+        min-height: 100vh;
+    }
+    
+    main{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        column-gap: 2em;
+        max-width: 140.5vh;
+        margin: 6em 1em;
+    }
+
+    #sec1{
+        background: url(images/bg-pattern-quotation.svg) top right 7em no-repeat var(--bg-color);
+
+    }  
+        
+    #sec1{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    #sec2{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    #sec5{
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+    
+    #sec3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #sec4{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    #sec3 q, #sec4 q, #sec5 q{
+        padding-top: 1em;
+    }
+
+    #sec4 q{
+        padding-right: 1em;
+    }
+
+    section{
+        padding-block-end: 2em;
+    }
+
+}
